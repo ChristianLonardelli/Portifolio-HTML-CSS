@@ -190,11 +190,12 @@ section {
     flex-wrap: wrap;
     gap: 20px; 
     justify-content: center;
+    align-items: stretch; /* Garante altura igual entre eles */
 }
 
 .card {
-    width: calc(50% - 10px); 
-    min-width: 300px;
+    width: 100%; /* No celular, 1 por linha */
+    max-width: 400px; /* Não deixa ficar muito largo em telas maiores */
     padding: 28px 20px; 
     border-radius: 20px;
     display: flex;
@@ -220,6 +221,7 @@ section {
     justify-content: center;
     color: white;
     font-size: 18px;
+    flex-shrink: 0;
 }
 
 .card-icone img {
@@ -238,6 +240,13 @@ section {
     font-size: 15px;
     line-height: 1.6;
     color: rgba(255, 255, 255, 0.7);
+}
+
+/* Ajuste para telas maiores: volta 2 por linha */
+@media (min-width: 768px) {
+    .card {
+        width: calc(50% - 10px);
+    }
 }
 
 .secao-exemplos {
