@@ -6,6 +6,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 100px;
 }
 
 body {
@@ -48,11 +49,10 @@ button,
 }
 
 .btn-icone img {
-    width: 40px; 
-    height: 40px;
+    width: 18px; 
+    height: 18px;
     object-fit: contain; 
 }
-
 
 button:hover,
 .btn-contato:hover {
@@ -75,7 +75,7 @@ header {
     background-color: rgba(3, 0, 19, 0.199); 
     border: 1px solid rgba(255, 255, 255, 0.15); 
     border-radius: 30px; 
-    padding: 16px 100px; 
+    padding: 12px 25px; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -83,43 +83,45 @@ header {
     backdrop-filter: blur(15px); 
 }
 
-
 nav ul {
     list-style: none;
     display: flex;
-    gap: 50px;
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 nav ul li a {
     color: rgba(255, 255, 255, 0.8); 
     text-decoration: none;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 500;
     transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #2a2842; 
+    color: #7c5dfa; 
 }
 
 section {
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding: 60px 8%; 
+    padding: 60px 5%; 
 }
 
 .secao1 {
     background-image: url("assets/fundo.jpg");
     background-size: cover;
     background-position: center;
-    height: 80vh;
+    min-height: 100vh;
     justify-content: center;
     align-items: center;
+    padding-top: 40px;
 }
 
 .secao1 h2 {
-    font-size: 10vw;
+    font-size: 13vw;
     text-align: center;
     margin-bottom: 20px;
     color: rgba(255, 255, 255, 0.568);
@@ -131,41 +133,43 @@ section {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 30px;
+    gap: 25px;
 }
 
 .conteudoPrincipal h1 {
     color: rgba(247, 245, 242, 0.664);
-    font-size: 3vw;
+    font-size: 6vw;
     text-align: center;
 }
 
 .conteudoPrincipal p {
     font-size: 16px;
+    text-align: center;
+    max-width: 600px;
 }
 
 .divButton {
     display: flex;
-    gap: 20px;
+    gap: 15px;
     margin-top: 20px;
     flex-wrap: wrap; 
     justify-content: center;
 }
 
 .tituloSecao {
-    font-size: 80px; 
+    font-size: 42px; 
     font-weight: 300;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     text-align: center;
 }
 
 .meioEntre {
-    width: 90%; 
-    max-width: 1200px; 
-    margin: 60px auto; 
-    padding: 32px 40px; 
+    width: 95%; 
+    max-width: 1000px; 
+    margin: 50px auto; 
+    padding: 28px 20px; 
     background-color: rgba(255, 255, 255, 0.06); 
-    border-radius: 35px; 
+    border-radius: 24px; 
     border: 1px solid rgba(255, 255, 255, 0.1); 
     backdrop-filter: blur(8px); 
     text-align: center; 
@@ -181,18 +185,18 @@ section {
     width: 100%;
 }
 
-
 .divCards {
     display: flex;
     flex-wrap: wrap;
-    gap: 24px; 
+    gap: 20px; 
     justify-content: center;
 }
 
 .card {
-    width: calc(50% - 12px); 
-    padding: 36px 28px; 
-    border-radius: 24px;
+    width: calc(50% - 10px); 
+    min-width: 300px;
+    padding: 28px 20px; 
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
     gap: 12px; 
@@ -206,7 +210,6 @@ section {
     background-color: rgba(50, 42, 105, 0.54); 
 }
 
-
 .card-icone {
     width: 40px;
     height: 40px;
@@ -219,6 +222,12 @@ section {
     font-size: 18px;
 }
 
+.card-icone img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
 .card h3 {
     font-size: 18px;
     font-weight: 600;
@@ -226,14 +235,14 @@ section {
 }
 
 .card p {
-    font-size: 16px;
+    font-size: 15px;
     line-height: 1.6;
     color: rgba(255, 255, 255, 0.7);
 }
 
 .secao-exemplos {
     background: #030013;
-    padding: 80px 8%; 
+    padding: 80px 5%; 
 }
 
 .secao-exemplos .container {
@@ -243,7 +252,7 @@ section {
 }
 
 .titulo-secao {
-    font-size: 50px; 
+    font-size: 38px; 
     font-weight: 500;
     margin-bottom: 16px;
     color: rgba(255, 255, 255, 0.9);
@@ -251,7 +260,7 @@ section {
 
 .texto-exemplo {
     max-width: 750px;
-    margin: 0 auto 4rem; 
+    margin: 0 auto 3rem; 
     color: #e0e3e6;
     font-size: 16px;
     line-height: 1.6;
@@ -260,7 +269,7 @@ section {
 .grade-exemplos {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 2.5rem;
+    gap: 2rem;
 }
 
 .img-3d-exemplo {
@@ -275,23 +284,19 @@ section {
     height: auto;
     display: block;
     transition: transform 0.6s ease;
-    fill: saturate(0);
 }
 
 .img-3d-exemplo:hover img {
     transform: scale(1.08);
 }
 
-
-
 .secao-depoimentos {
     position: relative;
     background: #030013;
-    padding: 80px 8%;
+    padding: 80px 5%;
     overflow: hidden; 
 }
 
-/* Nuvens mantidas */
 .nuvem {
     position: absolute;
     background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0) 60%);
@@ -337,7 +342,7 @@ section {
     position: relative;
     z-index: 2;
     text-align: center;
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: rgba(255, 255, 255, 0.9);
     margin-bottom: 12px;
 }
@@ -359,12 +364,12 @@ section {
     margin: 0 auto;
     display: flex;
     align-items: center;
-    gap: 3rem;
+    gap: 2.5rem;
     flex-wrap: wrap; 
 }
 
 .imagem-depoimentos {
-    flex: 1 1 350px; 
+    flex: 1 1 320px; 
 }
 
 .imagem-depoimentos img {
@@ -376,17 +381,17 @@ section {
 }
 
 .grade-depoimentos {
-    flex: 1 1 450px; 
+    flex: 1 1 380px; 
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.8rem;
 }
 
 .depoimento-card {
     background-color: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(185, 183, 230, 0.25);
     border-radius: 16px;
-    padding: 32px 28px;
+    padding: 28px 20px;
     color: rgba(255, 255, 255, 0.8);
     line-height: 1.7;
     font-size: 0.95rem;
@@ -417,35 +422,18 @@ section {
     font-weight: 500;
 }
 
-.secao-contato {
-    text-align: center;
-    padding: 80px 8%;
-}
-
-.caixa-contato {
-    max-width: 750px;
-    margin: 0 auto;
-    padding: 3rem;
-}
-
-.contato-info {
-    margin: 2rem 0;
-    font-size: 1.15rem;
-    color: #7dd4fc4b;
-}
-
 .secao-certificados {
     background: #030013;
-    padding: 100px 8%;
+    padding: 80px 5%;
     position: relative;
     overflow: hidden;
 }
 
 .titulo-certificados {
     text-align: center;
-    font-size: 2.8rem;
+    font-size: 2.5rem;
     color: rgba(255, 255, 255, 0.92);
-    margin-bottom: 70px;
+    margin-bottom: 60px;
     position: relative;
     z-index: 2;
 }
@@ -456,7 +444,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: stretch;
-    gap: 2.5rem; 
+    gap: 2rem; 
     perspective: 1200px;
     position: relative;
     z-index: 2;
@@ -464,9 +452,9 @@ section {
 }
 
 .certificado-card {
-    width: calc(50% - 1.25rem);
-    min-width: 360px;
-    padding: 24px;
+    width: calc(50% - 1rem);
+    min-width: 300px;
+    padding: 20px;
     background: rgba(255, 255, 255, 0.04);
     border: 1px solid rgba(124, 93, 250, 0.2);
     border-radius: 20px;
@@ -496,10 +484,6 @@ section {
     display: block;
     filter: brightness(0.95) contrast(1.05);
     transition: filter 0.4s ease;
-    fill: saturate(0);
-    &:houver{
-    fill: saturate(1);
-    }
 }
 
 .certificado-card:hover img {
@@ -507,9 +491,9 @@ section {
 }
 
 .certificado-card h3 {
-    margin-top: 18px;
+    margin-top: 16px;
     color: #c9e2ff;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     text-align: center;
     font-weight: 500;
 }
@@ -523,23 +507,12 @@ section {
 }
 
 .pretoCert {
-    background-color: rgba(50, 42, 105, 0.54); ;
-}
-
-@media (max-width: 800px) {
-    .certificado-card {
-        width: 100%;
-        transform: rotateX(2deg) translateZ(5px) !important;
-    }
-    .certificado-card:hover {
-        transform: rotateX(0deg) translateZ(20px) scale(1.02) !important;
-    }
+    background-color: rgba(50, 42, 105, 0.54); 
 }
 
 .rodape {
     background: #030013;
-    padding: 3rem 3%;
-    border-radius: 10px;
+    padding: 3rem 5%;
     border-top: 1px solid rgba(248, 249, 250, 0.048);
     text-align: center;
 }
@@ -553,4 +526,34 @@ section {
 .rodape p {
     color: #eff1f39d;
     margin-bottom: 0.5rem;
+}
+
+/* 📱 MEDIA QUERIES PRINCIPAIS */
+@media (max-width: 992px) {
+    nav ul { gap: 20px; }
+    .tituloSecao, .titulo-secao, .titulo-depoimentos, .titulo-certificados { font-size: 32px; }
+    .conteudoPrincipal h1 { font-size: 7vw; }
+}
+
+@media (max-width: 768px) {
+    body { padding-top: 80px; }
+    header { padding: 10px 20px; width: 92%; }
+    nav ul { gap: 15px; }
+    nav ul li a { font-size: 13px; }
+    .secao1 h2 { font-size: 12vw; }
+    .conteudoPrincipal h1 { font-size: 8vw; }
+    .card { width: 100%; }
+    .certificado-card { width: 100%; transform: rotateX(2deg) translateZ(5px) !important; }
+    .certificado-card:hover { transform: rotateX(0deg) translateZ(20px) scale(1.02) !important; }
+    .container-depoimentos { flex-direction: column; }
+    .imagem-depoimentos, .grade-depoimentos { flex: 1 1 100%; }
+    .meioEntre { padding: 20px 15px; }
+}
+
+@media (max-width: 480px) {
+    nav ul { gap: 12px; }
+    nav ul li a { font-size: 12px; }
+    .btn-contato { font-size: 15px; padding: 12px 20px; }
+    .tituloSecao, .titulo-secao, .titulo-depoimentos, .titulo-certificados { font-size: 28px; }
+    section { padding: 50px 4%; }
 }
