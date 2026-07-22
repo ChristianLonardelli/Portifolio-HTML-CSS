@@ -186,17 +186,17 @@ section {
 }
 
 .divCards {
-    display: grid; /* Usar grid fica perfeito para colunas */
-    grid-template-columns: repeat(2, 1fr); /* 2 colunas iguais */
-    gap: 20px; /* Espaço entre os cards */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px; 
     justify-content: center;
-    align-items: stretch; /* Todos com mesma altura */
+    align-items: stretch; 
     max-width: 1100px;
     margin: 0 auto;
 }
 
 .card {
-    width: 100%; /* Ocupa toda a coluna */
+    width: 100%; 
     padding: 28px 22px; 
     border-radius: 20px;
     display: flex;
@@ -243,10 +243,10 @@ section {
     color: rgba(255, 255, 255, 0.7);
 }
 
-/* 📱 Ajuste para celular: 1 coluna */
+
 @media (max-width: 768px) {
     .divCards {
-        grid-template-columns: 1fr; /* Apenas uma coluna */
+        grid-template-columns: 1fr;
         gap: 16px;
     }
     .card {
@@ -287,10 +287,12 @@ section {
 }
 
 .img-3d-exemplo {
+    display: block; 
     border-radius: 16px;
     overflow: hidden;
     border: 1px solid rgba(255, 255, 255, 0.342);
     box-shadow: 0 10px 40px #0701248e;
+    transition: transform 0.6s ease;
 }
 
 .img-3d-exemplo img {
